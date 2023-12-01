@@ -40,4 +40,20 @@ public class Band {
     public void setBandName(String bandName){
         this.bandName = bandName;
     }
+
+    public String getGenre(){
+        return genre;
+    }
+
+    public void setGenre(String genre){
+        this.genre = genre;
+    }
+
+    public int getYearFormed(){
+        return yearFormed;
+    }
+
+    public void setYearFormed(int yearFormed){
+        this.yearFormed = yearFormed;
+    }
 }
