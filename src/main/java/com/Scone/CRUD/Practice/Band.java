@@ -24,4 +24,20 @@ public class Band {
         this.genre = genre;
         this.yearFormed = yearFormed;
     }
+
+    public Long getId(){
+        return id;
+    }
+
+    public void setId(Long id){
+        this.id = id;
+    }
+
+    public String getBandName(){
+        return bandName;
+    }
+
+    public void setBandName(String bandName){
+        this.bandName = bandName;
+    }
 }
