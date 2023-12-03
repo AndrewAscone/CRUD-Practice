@@ -11,4 +11,6 @@ public class BandController {
     public BandController(BandService service){
         this.service = service;
     }
+    //create, read by id, read all, update by id, delete by id
+    //endpoints: PostMapping, GetMapping, PutMapping, DeleteMapping
 }
