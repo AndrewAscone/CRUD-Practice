@@ -16,8 +16,8 @@ public class BandController {
     public BandController(BandService service){
         this.service = service;
     }
-    //create*, read by id, read all, update by id, delete by id
-    //endpoints: PostMapping, GetMapping, PutMapping, DeleteMapping
+    //create*, read by id*, read all*, update by id*, delete by id*
+    //endpoints: PostMapping*, GetMapping*, PutMapping*, DeleteMapping*
     @PostMapping(value = "/create")
     public ResponseEntity<Band> create(@RequestBody Band band){
         return new ResponseEntity<>(service.create(band), HttpStatus.CREATED);
@@ -36,5 +36,10 @@ public class BandController {
     @PutMapping(value = "/update/{id}")
     public ResponseEntity<Band> updateById(@PathVariable Long id, @RequestBody Band newData){
         return new ResponseEntity<>(service.update(id, newData), HttpStatus.OK);
+    }
+
+    @DeleteMapping(value = "/delete/{id}")
+    public ResponseEntity<Band> deleteById(@PathVariable Long id){
+        return new ResponseEntity<>(service.deleteById(id), HttpStatus.OK);
     }
 }
