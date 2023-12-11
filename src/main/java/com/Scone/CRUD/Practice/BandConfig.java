@@ -17,5 +17,7 @@ public class BandConfig {
         band1.setBandName("Grateful Dead");
         band1.setGenre("Rock");
         band1.setYearFormed(1965);
+
+        repository.saveAll(Arrays.asList(band1));
     }
 }
