@@ -18,6 +18,8 @@ public class BandConfig {
         band1.setGenre("Rock");
         band1.setYearFormed(1965);
 
+        Band band2 = new Band();
+
         repository.saveAll(Arrays.asList(band1));
     }
 }
