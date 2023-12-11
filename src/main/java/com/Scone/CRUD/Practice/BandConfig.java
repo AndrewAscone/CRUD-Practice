@@ -19,7 +19,10 @@ public class BandConfig {
         band1.setYearFormed(1965);
 
         Band band2 = new Band();
+        band2.setBandName("Pearl Jam");
+        band2.setGenre("Grunge");
+        band2.setYearFormed(1990);
 
-        repository.saveAll(Arrays.asList(band1));
+        repository.saveAll(Arrays.asList(band1, band2));
     }
 }
