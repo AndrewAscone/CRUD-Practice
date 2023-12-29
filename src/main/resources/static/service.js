@@ -6,3 +6,5 @@ class Band {
         this.bandYear = bandYear;
     }
 }
+
+const updateDisplay = (response) => document.getElementById("output").innerText = JSON.stringify(response);
