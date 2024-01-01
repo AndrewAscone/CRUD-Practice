@@ -9,5 +9,9 @@ class Band {
 
 const updateDisplay = (response) => document.getElementById("output").innerText = JSON.stringify(response);
 
-function create(){
+function create(event){
+    event.preventDefault();
+
+    const bandIdElement = document.getElementById("band-id");
+    const bandNameElement = document.getElementById("band-name");
 }
