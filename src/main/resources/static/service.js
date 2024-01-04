@@ -14,4 +14,6 @@ function create(event){
 
     const bandIdElement = document.getElementById("band-id");
     const bandNameElement = document.getElementById("band-name");
+    const bandGenreElement = document.getElementById("band-genre");
+    const bandYearElement = document.getElementById("band-year-formed");
 }
