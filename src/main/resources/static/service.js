@@ -45,3 +45,10 @@ function create(event){
         }
     });
 }
+
+function readById(event) {
+    event.preventDefault();
+
+    const bandIdElement = document.getElementById("band-id");
+    const bandIdValue = bandIdElement.value;
+}
