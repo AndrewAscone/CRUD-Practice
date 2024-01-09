@@ -25,4 +25,23 @@ function create(event){
 
     const bandData = JSON.stringify(band);
     console.log(bandData);
+
+    $.ajax({
+        type: "POST",
+        crossDomain: true,
+        headers: {
+            'Accept':'application/json',
+            'Content-Type':'application/json',
+            'Access-Control-Allow-Origin': '*'
+        },
+        url: "/create",
+        data: bandData,
+        dataType: "JSON",
+        success: function(response){
+            updateDisplay(response)
+        },
+        error: function(error){
+            updateDisplay(error)
+        }
+    });
 }
