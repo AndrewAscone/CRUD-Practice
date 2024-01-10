@@ -51,4 +51,22 @@ function readById(event) {
 
     const bandIdElement = document.getElementById("band-id");
     const bandIdValue = bandIdElement.value;
+
+    $.ajax({
+        type: "GET",
+        crossDomain: true,
+        headers: {
+            'Accept':'application/json',
+            'Content-Type':'application/json',
+            'Access-Control-Allow-Origin': '*'
+        },
+        url: "/read/" + bandIdValue,
+        dataType: "JSON",
+        success: function(response) {
+            updateDisplay(response);
+        },
+        error: function(error) {
+            updateDisplay(error);
+        }
+    });
 }
