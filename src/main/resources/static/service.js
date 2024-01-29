@@ -70,3 +70,25 @@ function readById(event) {
         }
     });
 }
+
+function readAll(event){
+    event.preventDefault();
+
+    $.ajax({
+        type: "GET",
+        crossDomain: true,
+        headers: {
+            'Accept':'application/json',
+            'Content-Type':'application/json',
+            'Access-Control-Allow-Origin': '*'
+        },
+        url: "/readAll",
+        dataType: "JSON",
+        success: function(response) {
+            updateDisplay(response);
+        },
+        error: function(error) {
+            updateDisplay(error);
+        }
+    });
+}
