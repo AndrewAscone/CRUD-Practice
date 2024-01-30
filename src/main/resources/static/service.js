@@ -92,3 +92,9 @@ function readAll(event){
         }
     });
 }
+
+function update(event) {
+    event.preventDefault();
+
+
+}
