@@ -134,4 +134,22 @@ function deleteById(event) {
 
     const bandIdElement = document.getElementById("band-id");
     const bandIdValue = bandIdElement.value;
+
+    $.ajax({
+        type: "DELETE",
+        crossDomain: true,
+        headers: {
+            'Accept':'application/json',
+            'Content-Type':'application/json',
+            'Access-Control-Allow-Origin': '*'
+        },
+        url: "/delete/" + bandIdValue,
+        dataType: "JSON",
+        success: function(response) {
+            updateDisplay(response);
+        },
+        error: function(error) {
+            updateDisplay(error);
+        }
+    });
 }
