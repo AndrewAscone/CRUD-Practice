@@ -128,3 +128,10 @@ function update(event) {
         }
     });
 }
+
+function deleteById(event) {
+    event.preventDefault();
+
+    const bandIdElement = document.getElementById("band-id");
+    const bandIdValue = bandIdElement.value;
+}
