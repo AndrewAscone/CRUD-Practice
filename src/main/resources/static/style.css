@@ -5,3 +5,9 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.form-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
