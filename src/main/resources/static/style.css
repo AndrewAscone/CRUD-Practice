@@ -11,3 +11,14 @@
     align-items: center;
     margin-bottom: 10px;
 }
+
+label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
