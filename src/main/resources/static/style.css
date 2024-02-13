@@ -31,3 +31,9 @@ button {
     border: 1px solid black;
     cursor: pointer;
 }
+
+button:hover {
+    background-color: #ffffff;
+    color: #100ce6;
+    border: 1px solid #100ce6;
+}
