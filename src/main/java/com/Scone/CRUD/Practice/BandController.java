@@ -10,7 +10,7 @@ import java.util.List;
 
 @Controller
 public class BandController {
-    private BandService service;
+    private final BandService service;
 
     @Autowired
     public BandController(BandService service){

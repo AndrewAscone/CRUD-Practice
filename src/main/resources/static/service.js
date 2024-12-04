@@ -1,9 +1,9 @@
 class Band {
-    constructor(id, bandName, bandGenre, bandYear){
+    constructor(id, bandName, genre, yearFormed){
         this.id = id;
         this.bandName = bandName;
-        this.bandGenre = bandGenre;
-        this.bandYear = bandYear;
+        this.genre = genre;
+        this.yearFormed = yearFormed;
     }
 }
 
@@ -20,11 +20,12 @@ function create(event){
     const bandIdValue = bandIdElement.value;
     const bandNameValue = bandNameElement.value;
     const bandGenreValue = bandGenreElement.value;
-    const bandYearValue = bandYearElement.value;
+    const bandYearValue = parseInt(bandYearElement.value);
+
     const band = new Band(bandIdValue, bandNameValue, bandGenreValue, bandYearValue);
 
     const bandData = JSON.stringify(band);
-    console.log(bandData);
+    console.log("Payload to backend:", bandData);
 
     $.ajax({
         type: "POST",
@@ -122,7 +123,7 @@ function update(event) {
         data: bandData,
         success: function(response) {
             updateDisplay(response);
-        }
+        },
         error: function(error) {
             updateDisplay(error);
         }
