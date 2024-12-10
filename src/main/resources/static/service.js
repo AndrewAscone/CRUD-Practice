@@ -35,7 +35,7 @@ function create(event){
             'Content-Type':'application/json',
             'Access-Control-Allow-Origin': '*'
         },
-        url: "/create",
+        url: "/band/create",
         data: bandData,
         dataType: "JSON",
         success: function(response){
@@ -61,7 +61,7 @@ function readById(event) {
             'Content-Type':'application/json',
             'Access-Control-Allow-Origin': '*'
         },
-        url: "/read/" + bandIdValue,
+        url: "/band/read/" + bandIdValue,
         dataType: "JSON",
         success: function(response) {
             updateDisplay(response);
@@ -83,7 +83,7 @@ function readAll(event){
             'Content-Type':'application/json',
             'Access-Control-Allow-Origin': '*'
         },
-        url: "/readAll",
+        url: "/band/readAll",
         dataType: "JSON",
         success: function(response) {
             updateDisplay(response);
@@ -119,7 +119,7 @@ function update(event) {
             'Content-Type':'application/json',
             'Access-Control-Allow-Origin': '*'
         },
-        url: "/update/" + bandIdValue,
+        url: "/band/update/" + bandIdValue,
         data: bandData,
         success: function(response) {
             updateDisplay(response);
@@ -144,7 +144,7 @@ function deleteById(event) {
             'Content-Type':'application/json',
             'Access-Control-Allow-Origin': '*'
         },
-        url: "/delete/" + bandIdValue,
+        url: "/band/delete/" + bandIdValue,
         dataType: "JSON",
         success: function(response) {
             updateDisplay(response);

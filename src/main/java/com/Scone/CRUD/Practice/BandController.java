@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
+@RequestMapping(value = "/band")
 public class BandController {
     private final BandService service;
 
