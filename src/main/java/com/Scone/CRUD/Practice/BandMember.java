@@ -9,7 +9,7 @@ public class BandMember {
     private long id;
 
     private String name;
-    private String role;
+    private String instrument;
 
     @ManyToOne
     @JoinColumn(name = "band_id")
@@ -31,11 +31,11 @@ public class BandMember {
         this.name = name;
     }
 
-    public String getRole() {
-        return role;
+    public String getInstrument() {
+        return instrument;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setInstrument(String instrument) {
+        this.instrument = instrument;
     }
 }
